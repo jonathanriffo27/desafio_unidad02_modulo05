@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lens</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="/app/assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/afaa8b93cf.js" crossorigin="anonymous"></script>
+    <%# <noscript><link rel="stylesheet" href="/app/assets/css/noscript.css" /></noscript> %>
+  </head>
+</head>
+<body >
+  <div id="main">
+    <header id="header">
+      <h1>Lens</h1>
+      <p class='bold'>Acerca de la <%= link_to 'Galeria', about_path, class: 'icon' %></p>
+      <ul class="icons">
+        <li>
+          <%= link_to root_path, class: 'icon' do %>
+            <i class="fa-brands fa-twitter fa-xl"></i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to root_path, class: 'icon' do %>
+            <i class="fa-brands fa-instagram fa-xl"></i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to root_path, class: 'icon' do %>
+            <i class="fa-brands fa-github fa-xl"></i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to root_path, class: 'icon' do %>
+            <i class="fa-regular fa-envelope fa-xl"></i>
+          <% end %>
+        </li>
+      </ul>
+    </header>
+    <%= yield %>
+    <footer id="footer">
+      <ul class="copyright">
+        <li>&copy; Jonathan Riffo.</li>
+        <li>Design:
+          <%= link_to 'HTML5 UP', "http://html5up.net" %>
+          <%# <a href="http://html5up.net">HTML5 UP</a>. %>
+        </li>
+      </ul>
+    </footer>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'breakpoints.min' %>
+    <%= javascript_include_tag 'browser.min' %>
+    <%= javascript_include_tag 'jquery.min' %>
+    <%= javascript_include_tag 'main' %>
+  </div>
+</body>
+</html>

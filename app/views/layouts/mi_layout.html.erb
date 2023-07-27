@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lens</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload"%>
+    <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="/app/assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/afaa8b93cf.js" crossorigin="anonymous"></script>
+    <%# <noscript><link rel="stylesheet" href="/app/assets/css/noscript.css" /></noscript> %>
+  </head>
+</head>
+<body class = 'is-preload-0 is-preload-1 is-preload-2 galeria'>
+  <header id="header">
+    <h1>Acerca de la <%= link_to 'Galeria', root_path, class: 'icon' %></h1>
+    <h2 class='bold'></h2>
+    <ul class="icons padding">
+      <li>
+        <%= link_to root_path, class: 'icon' do %>
+          <i class="fa-brands fa-twitter fa-xl"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to root_path, class: 'icon' do %>
+          <i class="fa-brands fa-instagram fa-xl"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to root_path, class: 'icon' do %>
+          <i class="fa-brands fa-github fa-xl"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to root_path, class: 'icon' do %>
+          <i class="fa-regular fa-envelope fa-xl"></i>
+        <% end %>
+      </li>
+    </ul>
+  </header>
+  <section>
+    <p class='info'>"¡Bienvenidos a nuestra galería de arte moderno! Aquí encontrarás una colección de imágenes de algunos de los artistas más innovadores y emocionantes del mundo. Desde pinturas abstractas hasta esculturas vanguardistas, nuestra galería tiene algo para todos los amantes del arte. Navega por las imágenes haciendo clic en ellas o utilizando los botones de navegación, y asegúrate de visitar nuestra vista de resumen para obtener más información acerca de la galería. ¡Disfruta de la experiencia!"
+    </p>
+  </section>
+  <section>
+    <article id="imagenes">
+      <img src="images/thumbs/01.jpg" alt="" />
+      <img src="images/thumbs/02.jpg" alt="" />
+      <img src="images/thumbs/03.jpg" alt="" />
+    </article>
+  </section>
+</body>
+</html>
